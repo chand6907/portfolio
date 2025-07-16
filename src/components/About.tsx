@@ -18,9 +18,9 @@ const About = () => {
               <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-gradient-to-br from-cyan-500/20 to-purple-500/20 p-1">
                 <div className="w-full h-full rounded-full overflow-hidden bg-gray-800">
                   <img 
-                    src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                    src="/WhatsApp Image 2025-07-14 at 16.46.58_846a0c76.jpg" 
                     alt="Chand - Full Stack Developer"
-                    className="w-full h-full object-cover scale-110"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
