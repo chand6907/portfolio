@@ -50,12 +50,12 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-6 lg:ml-10 flex items-baseline space-x-4 lg:space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-3 py-2 text-sm font-medium transition-all duration-300 ${
+                  className={`px-2 lg:px-3 py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                     activeSection === item.id
                       ? 'text-cyan-400'
                       : 'text-gray-300 hover:text-cyan-400'
@@ -81,15 +81,15 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900 rounded-b-lg">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-b-lg border-t border-gray-700">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`block px-3 py-2 text-base font-medium w-full text-left transition-all duration-300 ${
+                  className={`block px-3 py-3 text-base font-medium w-full text-left transition-all duration-300 rounded-lg ${
                     activeSection === item.id
-                      ? 'text-cyan-400'
-                      : 'text-gray-300 hover:text-cyan-400'
+                      ? 'text-cyan-400 bg-cyan-400/10'
+                      : 'text-gray-300 hover:text-cyan-400 hover:bg-gray-700/50'
                   }`}
                 >
                   {item.label}

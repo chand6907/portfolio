@@ -107,14 +107,14 @@ const Contact = () => {
                     <a
                       key={index}
                       href={contact.href}
-                      className="flex items-center gap-4 p-4 bg-gray-900/50 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyan-400/50 transition-all duration-300 group"
+                      className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-gray-900/50 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyan-400/50 transition-all duration-300 group"
                     >
-                      <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg group-hover:from-cyan-600 group-hover:to-purple-700 transition-all duration-300">
-                        <IconComponent size={20} className="text-white" />
+                      <div className="p-2 sm:p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg group-hover:from-cyan-600 group-hover:to-purple-700 transition-all duration-300 flex-shrink-0">
+                        <IconComponent size={16} className="sm:w-5 sm:h-5 text-white" />
                       </div>
-                      <div>
+                      <div className="min-w-0 flex-1">
                         <p className="font-medium text-white">{contact.label}</p>
-                        <p className="text-gray-400 group-hover:text-cyan-400 transition-colors">
+                        <p className="text-sm sm:text-base text-gray-400 group-hover:text-cyan-400 transition-colors break-all">
                           {contact.value}
                         </p>
                       </div>
@@ -192,7 +192,7 @@ const Contact = () => {
         {/* Social Links */}
         <div className="mt-12 text-center">
           <h3 className="text-xl font-bold mb-6 text-white">Connect with me 💙</h3>
-          <div className="flex justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             {socialLinks.map((social, index) => {
               const IconComponent = social.icon;
               return (
@@ -201,9 +201,10 @@ const Contact = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-4 bg-gray-900/50 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyan-400/50 ${social.color} transition-all duration-300 group hover:transform hover:scale-110`}
+                  className={`p-3 sm:p-4 bg-gray-900/50 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyan-400/50 ${social.color} transition-all duration-300 group hover:transform hover:scale-110 flex-shrink-0`}
+                  title={social.label}
                 >
-                  <IconComponent size={24} className="text-gray-400 group-hover:text-white transition-colors" />
+                  <IconComponent size={20} className="sm:w-6 sm:h-6 text-gray-400 group-hover:text-white transition-colors" />
                 </a>
               );
             })}

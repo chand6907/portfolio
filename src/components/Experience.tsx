@@ -65,33 +65,35 @@ const Experience = () => {
     <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl sm:text-6xl font-bold mb-6 text-white">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
             EXPERIENCE
           </h2>
-          <div className="text-2xl text-gray-400 mb-6">& QUALIFICATIONS 🎓</div>
+          <div className="text-lg sm:text-2xl text-gray-400 mb-6">& QUALIFICATIONS 🎓</div>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
         </div>
 
         {/* Tab Navigation */}
         <div className="flex justify-center mb-12">
-          <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700">
+          <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-1 sm:p-2 border border-gray-700 overflow-x-auto">
+            <div className="flex gap-1 sm:gap-0 min-w-max">
             {tabs.map((tab) => {
               const IconComponent = tab.icon;
               return (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all duration-300 ${
+                  className={`flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-2 sm:py-3 rounded-xl transition-all duration-300 whitespace-nowrap ${
                     activeTab === tab.id
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
                       : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
                   }`}
                 >
-                  <IconComponent size={20} />
-                  <span className="font-medium">{tab.label}</span>
+                  <IconComponent size={16} className="sm:w-5 sm:h-5" />
+                  <span className="text-sm sm:text-base font-medium">{tab.label}</span>
                 </button>
               );
             })}
+            </div>
           </div>
         </div>
 
@@ -101,25 +103,25 @@ const Experience = () => {
           {activeTab === 'education' && (
             <div className="space-y-8">
               <div className="relative">
-                <div className="absolute left-4 top-8 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 to-purple-500"></div>
+                <div className="absolute left-3 sm:left-4 top-6 sm:top-8 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 to-purple-500"></div>
                 {education.map((edu, index) => (
-                  <div key={index} className="relative flex gap-6 pb-8">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
-                      <GraduationCap size={16} className="text-white" />
+                  <div key={index} className="relative flex gap-3 sm:gap-6 pb-6 sm:pb-8">
+                    <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
+                      <GraduationCap size={12} className="sm:w-4 sm:h-4 text-white" />
                     </div>
-                    <div className="flex-grow bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div className="flex-grow bg-gray-900/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-gray-700">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                        <h3 className="text-xl font-semibold text-white">{edu.degree}</h3>
+                        <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-0">{edu.degree}</h3>
                         <div className="flex items-center gap-2 text-cyan-400 text-sm">
-                          <Calendar size={14} />
+                          <Calendar size={12} className="sm:w-3.5 sm:h-3.5" />
                           {edu.period}
                         </div>
                       </div>
-                      <div className="flex items-center gap-2 text-gray-400 mb-3">
-                        <MapPin size={14} />
+                      <div className="flex items-center gap-2 text-gray-400 mb-3 text-sm sm:text-base">
+                        <MapPin size={12} className="sm:w-3.5 sm:h-3.5 flex-shrink-0" />
                         <span>{edu.institution}, {edu.location}</span>
                       </div>
-                      <p className="text-gray-300 leading-relaxed">{edu.description}</p>
+                      <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{edu.description}</p>
                     </div>
                   </div>
                 ))}
@@ -131,25 +133,25 @@ const Experience = () => {
           {activeTab === 'work' && (
             <div className="space-y-8">
               <div className="relative">
-                <div className="absolute left-4 top-8 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 to-purple-500"></div>
+                <div className="absolute left-3 sm:left-4 top-6 sm:top-8 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 to-purple-500"></div>
                 {experience.map((exp, index) => (
-                  <div key={index} className="relative flex gap-6 pb-8">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
-                      <Briefcase size={16} className="text-white" />
+                  <div key={index} className="relative flex gap-3 sm:gap-6 pb-6 sm:pb-8">
+                    <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
+                      <Briefcase size={12} className="sm:w-4 sm:h-4 text-white" />
                     </div>
-                    <div className="flex-grow bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div className="flex-grow bg-gray-900/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-gray-700">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                        <h3 className="text-xl font-semibold text-white">{exp.title}</h3>
+                        <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-0">{exp.title}</h3>
                         <div className="flex items-center gap-2 text-cyan-400 text-sm">
-                          <Calendar size={14} />
+                          <Calendar size={12} className="sm:w-3.5 sm:h-3.5" />
                           {exp.period}
                         </div>
                       </div>
-                      <div className="flex items-center gap-2 text-gray-400 mb-3">
-                        <MapPin size={14} />
+                      <div className="flex items-center gap-2 text-gray-400 mb-3 text-sm sm:text-base">
+                        <MapPin size={12} className="sm:w-3.5 sm:h-3.5 flex-shrink-0" />
                         <span>{exp.company}, {exp.location}</span>
                       </div>
-                      <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+                      <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{exp.description}</p>
                     </div>
                   </div>
                 ))}
@@ -161,25 +163,25 @@ const Experience = () => {
           {activeTab === 'leadership' && (
             <div className="space-y-8">
               <div className="relative">
-                <div className="absolute left-4 top-8 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 to-purple-500"></div>
+                <div className="absolute left-3 sm:left-4 top-6 sm:top-8 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 to-purple-500"></div>
                 {leadership.map((lead, index) => (
-                  <div key={index} className="relative flex gap-6 pb-8">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
-                      <Award size={16} className="text-white" />
+                  <div key={index} className="relative flex gap-3 sm:gap-6 pb-6 sm:pb-8">
+                    <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
+                      <Award size={12} className="sm:w-4 sm:h-4 text-white" />
                     </div>
-                    <div className="flex-grow bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div className="flex-grow bg-gray-900/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-gray-700">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                        <h3 className="text-xl font-semibold text-white">{lead.title}</h3>
+                        <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-0">{lead.title}</h3>
                         <div className="flex items-center gap-2 text-cyan-400 text-sm">
-                          <Calendar size={14} />
+                          <Calendar size={12} className="sm:w-3.5 sm:h-3.5" />
                           {lead.period}
                         </div>
                       </div>
-                      <div className="flex items-center gap-2 text-gray-400 mb-3">
-                        <Award size={14} />
+                      <div className="flex items-center gap-2 text-gray-400 mb-3 text-sm sm:text-base">
+                        <Award size={12} className="sm:w-3.5 sm:h-3.5 flex-shrink-0" />
                         <span>{lead.organization}</span>
                       </div>
-                      <p className="text-gray-300 leading-relaxed">{lead.description}</p>
+                      <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{lead.description}</p>
                     </div>
                   </div>
                 ))}

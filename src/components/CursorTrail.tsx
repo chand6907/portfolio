@@ -45,7 +45,7 @@ const CursorTrail = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-50">
+    <div className="fixed inset-0 pointer-events-none z-50 hidden sm:block">
       {/* Main cursor */}
       <div
         className="fixed w-4 h-4 bg-cyan-400 rounded-full mix-blend-difference transition-transform duration-100 ease-out"

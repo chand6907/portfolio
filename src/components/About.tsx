@@ -13,14 +13,14 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
-          <div className="relative group flex justify-center">
+          <div className="relative group flex justify-center order-2 lg:order-1">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden bg-gradient-to-br from-cyan-500/20 to-purple-500/20 p-1">
+              <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-gradient-to-br from-cyan-500/20 to-purple-500/20 p-1">
                 <div className="w-full h-full rounded-full overflow-hidden bg-gray-800">
                   <img 
-                    src="/WhatsApp Image 2025-07-14 at 16.46.58_846a0c76.jpg" 
+                    src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800" 
                     alt="Chand - Full Stack Developer"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover scale-110"
                   />
                 </div>
               </div>
@@ -29,7 +29,7 @@ const About = () => {
           </div>
 
           {/* Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 order-1 lg:order-2">
             <div className="space-y-4 text-gray-300 leading-relaxed text-lg">
               <p>
                 A driven IT student dedicated to turning innovative concepts into impactful digital solutions. 

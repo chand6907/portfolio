@@ -35,14 +35,14 @@ const Hero = () => {
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="mb-8 mt-20">
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold mb-6">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
             <span className="block mb-4 text-white">Hi, I'm</span>
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               CHAND
             </span>
           </h1>
           
-          <div className="text-2xl sm:text-3xl lg:text-4xl text-gray-300 mb-8 h-16">
+          <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-8 h-12 sm:h-16">
             <span>I'm a </span>
             <span className="text-cyan-400 font-semibold">
               {displayText}
@@ -50,7 +50,7 @@ const Hero = () => {
             </span>
           </div>
 
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed px-4">
             A driven IT student passionate about creating innovative digital solutions with modern technologies. 
             Currently pursuing BTech in Information Technology at GVP College of Engineering.
           </p>

@@ -41,11 +41,11 @@ const Projects = () => {
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl sm:text-6xl font-bold mb-6 text-white">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
             PROJECTS 🚀
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
-          <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-base sm:text-lg px-4">
             Here are some of my recent projects that showcase my skills in full-stack development, 
             problem-solving, and creating user-friendly applications.
           </p>
@@ -58,7 +58,7 @@ const Projects = () => {
               className="group bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700 hover:border-cyan-400/50 transition-all duration-500 hover:transform hover:scale-[1.02]"
             >
               {/* Project Image */}
-              <div className="relative overflow-hidden h-48">
+              <div className="relative overflow-hidden h-40 sm:h-48">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -88,21 +88,21 @@ const Projects = () => {
               </div>
 
               {/* Project Details */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-400 mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-400 mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
                 {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-1 sm:gap-2 mb-4 sm:mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 font-medium border border-cyan-500/30"
+                      className="px-2 sm:px-3 py-1 text-xs rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 font-medium border border-cyan-500/30"
                     >
                       {tech}
                     </span>
@@ -110,12 +110,12 @@ const Projects = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-3">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300 text-sm"
+                    className="flex items-center justify-center gap-2 px-4 py-2 bg-gray-800 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300 text-sm"
                   >
                     <Github size={16} />
                     Github
@@ -124,7 +124,7 @@ const Projects = () => {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white hover:shadow-lg transition-all duration-300 text-sm"
+                    className="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white hover:shadow-lg transition-all duration-300 text-sm"
                   >
                     <ExternalLink size={16} />
                     Live Demo

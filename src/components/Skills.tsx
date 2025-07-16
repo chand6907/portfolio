@@ -115,7 +115,7 @@ const Skills = () => {
     <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-black" ref={skillsRef}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl sm:text-6xl font-bold mb-6 text-white">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
             SKILLS
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
@@ -123,8 +123,8 @@ const Skills = () => {
 
         {/* Tech Stack */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-12 text-white">Technical Skills</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 max-w-5xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-white">Technical Skills</h3>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto">
             {techStack.map((tech, index) => (
               <div
                 key={index}
@@ -141,7 +141,7 @@ const Skills = () => {
                 }}
               >
                 {/* Logo Container */}
-                <div className="relative w-16 h-16 mb-3 transition-all duration-300 group-hover:scale-125">
+                <div className="relative w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mb-2 sm:mb-3 transition-all duration-300 group-hover:scale-125">
                   <img 
                     src={tech.icon} 
                     alt={tech.name}
@@ -162,7 +162,7 @@ const Skills = () => {
                 </div>
 
                 {/* Tech Name */}
-                <span className="text-xs text-gray-300 font-medium text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-xs sm:text-sm text-gray-300 font-medium text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {tech.name}
                 </span>
 
@@ -175,12 +175,12 @@ const Skills = () => {
 
         {/* Soft Skills */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-8 text-white">Soft Skills</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 text-white">Soft Skills</h3>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto">
             {softSkills.map((skill, index) => (
               <div
                 key={index}
-                className={`bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl p-6 border border-gray-700 text-center transition-all duration-500 hover:transform hover:scale-105 hover:border-cyan-400/50 ${
+                className={`bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl p-4 sm:p-6 border border-gray-700 text-center transition-all duration-500 hover:transform hover:scale-105 hover:border-cyan-400/50 ${
                   isVisible 
                     ? 'animate-fade-in-up' 
                     : 'opacity-0 translate-y-10'
@@ -190,8 +190,8 @@ const Skills = () => {
                   animationFillMode: 'forwards'
                 }}
               >
-                <div className="text-4xl mb-3">{skill.emoji}</div>
-                <p className="text-white font-medium">{skill.name}</p>
+                <div className="text-2xl sm:text-4xl mb-2 sm:mb-3">{skill.emoji}</div>
+                <p className="text-sm sm:text-base text-white font-medium">{skill.name}</p>
               </div>
             ))}
           </div>

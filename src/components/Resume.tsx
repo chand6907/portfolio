@@ -21,17 +21,17 @@ const Resume = () => {
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full mb-6"></div>
           
-          <p className="text-gray-400 mb-8 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 mb-8 text-base sm:text-lg max-w-2xl mx-auto px-4">
             View my complete resume to learn more about my experience, skills, and achievements. 
             Get a comprehensive overview of my journey as a developer and IT student.
           </p>
           
-          <div className="flex justify-center">
+          <div className="flex justify-center px-4">
             <button
               onClick={handleViewResume}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full text-white font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 hover:transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+              className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full text-white font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 hover:transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 text-sm sm:text-base"
             >
-              <Eye size={24} />
+              <Eye size={20} className="sm:w-6 sm:h-6" />
               View Resume
             </button>
           </div>
