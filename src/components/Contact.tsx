@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Send, Link2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Send, Link2, Instagram, Youtube } from 'lucide-react';
 import { db } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 
@@ -45,16 +45,16 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      icon: Github,
-      label: 'GitHub',
-      href: 'https://github.com/chand6907',
-      color: 'hover:bg-gray-700'
-    },
-    {
       icon: Linkedin,
       label: 'LinkedIn',
       href: 'https://linkedin.com/in/chand6907',
       color: 'hover:bg-blue-600'
+    },
+    {
+      icon: Github,
+      label: 'GitHub',
+      href: 'https://github.com/chand6907',
+      color: 'hover:bg-gray-700'
     },
     {
       icon: Mail,
@@ -63,7 +63,19 @@ const Contact = () => {
       color: 'hover:bg-red-600'
     },
     {
-      icon: Link2, // Use lucide-react's Link2 icon for Linktree
+      icon: Instagram,
+      label: 'Instagram',
+      href: 'https://www.instagram.com/prince_chand_6907/',
+      color: 'hover:bg-pink-500'
+    },
+    {
+      icon: Youtube,
+      label: 'YouTube',
+      href: 'https://www.youtube.com/@chand6907',
+      color: 'hover:bg-red-500'
+    },
+    {
+      icon: Link2,
       label: 'Linktree',
       href: 'https://linktr.ee/pc6907',
       color: 'hover:bg-green-400'
@@ -179,7 +191,7 @@ const Contact = () => {
 
         {/* Social Links */}
         <div className="mt-12 text-center">
-          <h3 className="text-xl font-bold mb-6 text-white">Connect with me</h3>
+          <h3 className="text-xl font-bold mb-6 text-white">Connect with me 💙</h3>
           <div className="flex justify-center gap-6">
             {socialLinks.map((social, index) => {
               const IconComponent = social.icon;
